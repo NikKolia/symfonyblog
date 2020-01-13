@@ -1,0 +1,31 @@
+# src/Blogger/BlogBundle/Resources/config/routing.yml
+BloggerBlogBundle_homepage:
+    path:     /
+    defaults: { _controller: "BloggerBlogBundle:Page:index" }
+    requirements:
+        methods:  GET
+
+BloggerBlogBundle_about:
+    path:   /about
+    defaults: { _controller: "BloggerBlogBundle:Page:about" }
+    requirements:
+        methods:  GET
+
+BloggerBlogBundle_contacts:
+    path:   /contacts
+    defaults: { _controller: "BloggerBlogBundle:Page:contacts" }
+    requirements:
+        methods:  GET
+
+BloggerBlogBundle_products:
+    path:   /products
+    defaults: { _controller: "BloggerBlogBundle:Page:products" }
+    requirements:
+        methods:  GET
+
+BloggerBlogBundle_product:
+    path:   /product/{id}
+    defaults: { _controller: "BloggerBlogBundle:Page:show" }
+    requirements:
+        id: "[0-9]+"
+    methods:  GET
